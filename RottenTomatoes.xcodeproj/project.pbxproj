@@ -13,6 +13,7 @@
 		5577D74D19C50E3F002CFCDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5577D74C19C50E3F002CFCDC /* Images.xcassets */; };
 		5577D75019C50E3F002CFCDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5577D74E19C50E3F002CFCDC /* LaunchScreen.xib */; };
 		5577D75C19C50E3F002CFCDC /* RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D75B19C50E3F002CFCDC /* RottenTomatoesTests.swift */; };
+		5577D76619C50FFB002CFCDC /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D76519C50FFB002CFCDC /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5577D75519C50E3F002CFCDC /* RottenTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5577D75A19C50E3F002CFCDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5577D75B19C50E3F002CFCDC /* RottenTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenTomatoesTests.swift; sourceTree = "<group>"; };
+		5577D76519C50FFB002CFCDC /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				5577D74C19C50E3F002CFCDC /* Images.xcassets */,
 				5577D74E19C50E3F002CFCDC /* LaunchScreen.xib */,
 				5577D74319C50E3F002CFCDC /* Supporting Files */,
+				5577D76519C50FFB002CFCDC /* MovieViewController.swift */,
 			);
 			path = RottenTomatoes;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				5577D74819C50E3F002CFCDC /* ViewController.swift in Sources */,
 				5577D74619C50E3F002CFCDC /* AppDelegate.swift in Sources */,
+				5577D76619C50FFB002CFCDC /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
