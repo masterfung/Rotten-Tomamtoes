@@ -11,12 +11,30 @@ import UIKit
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var movies: [NSDictionary] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let YourApiKey =  "y2fb7ajxwdkc8h8y22ur7eer"
+        
+        var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=y2fb7ajxwdkc8h8y22ur7eer&limit=20&country=us"
+        
+        var request = NSURLRequest(URL: NSURL(string: url))
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+            (response: NSURLResponse!, data: NSData!, error: NSError?) -> Void in
+            var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+            
+//            println("object: \(object)") 
+            
+            self.movies = object["movies"] as [NSDictionary] //use of self is necessary in closures
+            
+            self.tableView.reloadData()
+        }
         
     }
 
@@ -27,15 +45,17 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieCell
         
-        cell.titleLabel.text = "Title"
-        cell.synopsisLabel.text = "Synopsis"
+        var movie = movies[indexPath.row]
+        
+        cell.titleLabel.text = movie["title"] as? String
+        cell.synopsisLabel.text = movie["synopsis"] as? String
         
         return cell
     }
