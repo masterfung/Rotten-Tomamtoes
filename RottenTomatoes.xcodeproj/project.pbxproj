@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F8F8D824D944657B865F073 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C76D081AC794E95ACB12293 /* libPods.a */; };
+		555B34D319C5F181008F8C4D /* MovieViewTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B34D219C5F181008F8C4D /* MovieViewTabController.swift */; };
 		5577D74619C50E3F002CFCDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D74519C50E3F002CFCDC /* AppDelegate.swift */; };
 		5577D74819C50E3F002CFCDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D74719C50E3F002CFCDC /* ViewController.swift */; };
 		5577D74B19C50E3F002CFCDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5577D74919C50E3F002CFCDC /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		4C76D081AC794E95ACB12293 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B34CF19C5787E008F8C4D /* RottenTomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RottenTomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
+		555B34D219C5F181008F8C4D /* MovieViewTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewTabController.swift; sourceTree = "<group>"; };
 		5577D74019C50E3F002CFCDC /* RottenTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5577D74419C50E3F002CFCDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5577D74519C50E3F002CFCDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5577D74719C50E3F002CFCDC /* ViewController.swift */,
 				5577D74919C50E3F002CFCDC /* Main.storyboard */,
 				5577D76519C50FFB002CFCDC /* MovieViewController.swift */,
+				555B34D219C5F181008F8C4D /* MovieViewTabController.swift */,
 				5577D76719C51B3A002CFCDC /* MovieCell.swift */,
 				5577D74C19C50E3F002CFCDC /* Images.xcassets */,
 				5577D74E19C50E3F002CFCDC /* LaunchScreen.xib */,
@@ -272,6 +275,7 @@
 				5577D74819C50E3F002CFCDC /* ViewController.swift in Sources */,
 				5577D74619C50E3F002CFCDC /* AppDelegate.swift in Sources */,
 				5577D76819C51B3A002CFCDC /* MovieCell.swift in Sources */,
+				555B34D319C5F181008F8C4D /* MovieViewTabController.swift in Sources */,
 				5577D76619C50FFB002CFCDC /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
