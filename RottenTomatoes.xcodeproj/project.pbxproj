@@ -14,6 +14,7 @@
 		5577D75019C50E3F002CFCDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5577D74E19C50E3F002CFCDC /* LaunchScreen.xib */; };
 		5577D75C19C50E3F002CFCDC /* RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D75B19C50E3F002CFCDC /* RottenTomatoesTests.swift */; };
 		5577D76619C50FFB002CFCDC /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D76519C50FFB002CFCDC /* MovieViewController.swift */; };
+		5577D76819C51B3A002CFCDC /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5577D76719C51B3A002CFCDC /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5577D75A19C50E3F002CFCDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5577D75B19C50E3F002CFCDC /* RottenTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenTomatoesTests.swift; sourceTree = "<group>"; };
 		5577D76519C50FFB002CFCDC /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		5577D76719C51B3A002CFCDC /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +84,11 @@
 				5577D74519C50E3F002CFCDC /* AppDelegate.swift */,
 				5577D74719C50E3F002CFCDC /* ViewController.swift */,
 				5577D74919C50E3F002CFCDC /* Main.storyboard */,
+				5577D76519C50FFB002CFCDC /* MovieViewController.swift */,
+				5577D76719C51B3A002CFCDC /* MovieCell.swift */,
 				5577D74C19C50E3F002CFCDC /* Images.xcassets */,
 				5577D74E19C50E3F002CFCDC /* LaunchScreen.xib */,
 				5577D74319C50E3F002CFCDC /* Supporting Files */,
-				5577D76519C50FFB002CFCDC /* MovieViewController.swift */,
 			);
 			path = RottenTomatoes;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				5577D74819C50E3F002CFCDC /* ViewController.swift in Sources */,
 				5577D74619C50E3F002CFCDC /* AppDelegate.swift in Sources */,
+				5577D76819C51B3A002CFCDC /* MovieCell.swift in Sources */,
 				5577D76619C50FFB002CFCDC /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				5577D76119C50E3F002CFCDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5577D76219C50E3F002CFCDC /* Build configuration list for PBXNativeTarget "RottenTomatoesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				5577D76419C50E3F002CFCDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
