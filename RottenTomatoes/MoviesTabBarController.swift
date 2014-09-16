@@ -1,20 +1,15 @@
 //
-//  MovieViewTabController.swift
+//  MoviesTabBarController.swift
 //  RottenTomatoes
 //
-//  Created by Tsung Hung on 9/14/14.
+//  Created by Tsung Hung on 9/16/14.
 //  Copyright (c) 2014 Tsung Hung. All rights reserved.
 //
 
 import UIKit
 
-class MovieViewTabController: UIViewController {
+class MoviesTabBarController: UITabBarController {
 
-    
-    @IBOutlet weak var movieDetailPoster: UIImageView!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
