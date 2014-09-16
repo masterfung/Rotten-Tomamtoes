@@ -8,8 +8,11 @@
 
 import UIKit
 
-class MovieViewTabController: UITabBarController {
+class MovieViewTabController: UIViewController {
 
+    
+    @IBOutlet weak var movieDetailPoster: UIImageView!
+    
     
     
     override func viewDidLoad() {
