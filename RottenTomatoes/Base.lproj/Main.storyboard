@@ -23,7 +23,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="100" id="bvJ-Li-3aF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="100" id="bvJ-Li-3aF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvJ-Li-3aF" id="3KX-5S-qZ7">
@@ -56,6 +56,7 @@
                                             <outlet property="posterView" destination="RrG-vV-d9f" id="mQ8-lW-8Bl"/>
                                             <outlet property="synopsisLabel" destination="7u2-MH-uS8" id="7rg-OQ-FqZ"/>
                                             <outlet property="titleLabel" destination="coq-Le-ssM" id="pgD-Kn-U0y"/>
+                                            <segue destination="yaj-dy-wNy" kind="push" id="5me-zQ-mRN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -80,6 +81,21 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1075" y="365"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qc6-Bw-Ult">
+            <objects>
+                <viewController id="yaj-dy-wNy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNq-gc-zIP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OMS-uX-dfe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FD-c6-TlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oSw-03-fIq">
