@@ -151,7 +151,6 @@
                     <navigationItem key="navigationItem" id="d1U-dD-e6C"/>
                     <connections>
                         <outlet property="movieDetailPoster" destination="647-Rq-jo0" id="svH-Wz-EFQ"/>
-                        <outlet property="movieDetailUserInteraction" destination="ckI-Kp-jb2" id="XYi-uA-puq"/>
                         <outlet property="movieLabel" destination="PnL-Z9-vXn" id="5NQ-HJ-mij"/>
                         <outlet property="ratingLabel" destination="CFl-0L-Ndl" id="WQz-sH-5Zm"/>
                         <outlet property="scoreRatingLabel" destination="4Ct-sR-sKk" id="7qm-fK-QhP"/>
