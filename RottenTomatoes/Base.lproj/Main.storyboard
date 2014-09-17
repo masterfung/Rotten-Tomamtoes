@@ -26,7 +26,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="120" id="bvJ-Li-3aF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="120" id="bvJ-Li-3aF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvJ-Li-3aF" id="3KX-5S-qZ7">
@@ -53,8 +53,8 @@
                                             </subviews>
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="posterView" destination="RrG-vV-d9f" id="mQ8-lW-8Bl"/>
                                             <outlet property="synopsisLabel" destination="7u2-MH-uS8" id="7rg-OQ-FqZ"/>
@@ -106,7 +106,7 @@
                                 <rect key="frame" x="-68" y="66" width="388" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="hoe-TV-I8H">
+                            <view alpha="0.75" contentMode="center" id="hoe-TV-I8H">
                                 <rect key="frame" x="0.0" y="84" width="320" height="435"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -114,12 +114,14 @@
                                         <rect key="frame" x="114" y="44" width="92" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SummaryLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k5f-mW-Uvw">
                                         <rect key="frame" x="8" y="147" width="304" height="316"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MovieLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PnL-Z9-vXn">
@@ -133,9 +135,15 @@
                                         <rect key="frame" x="76" y="81" width="168" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ckI-Kp-jb2" appends="YES" id="WR7-kW-5pa"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,6 +151,7 @@
                     <navigationItem key="navigationItem" id="d1U-dD-e6C"/>
                     <connections>
                         <outlet property="movieDetailPoster" destination="647-Rq-jo0" id="svH-Wz-EFQ"/>
+                        <outlet property="movieDetailUserInteraction" destination="ckI-Kp-jb2" id="XYi-uA-puq"/>
                         <outlet property="movieLabel" destination="PnL-Z9-vXn" id="5NQ-HJ-mij"/>
                         <outlet property="ratingLabel" destination="CFl-0L-Ndl" id="WQz-sH-5Zm"/>
                         <outlet property="scoreRatingLabel" destination="4Ct-sR-sKk" id="7qm-fK-QhP"/>
@@ -150,6 +159,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M82-0c-u7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ckI-Kp-jb2">
+                    <connections>
+                        <action selector="movieHandlePan:" destination="E4W-Ns-D0b" id="F3R-AG-fBf"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2056" y="365"/>
         </scene>

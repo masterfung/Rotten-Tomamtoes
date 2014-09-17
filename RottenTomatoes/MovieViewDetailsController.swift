@@ -41,10 +41,16 @@ class MovieViewDetailsController: UIViewController {
         self.scoreRatingLabel.text = "Critics Score: \(String (criticsScore)) Audience Score: \(String (audienceScore))"
         self.summaryLabel.text = synopsis
         
+        var posters = movie["posters"] as NSDictionary
+        var thumbnailPosterURL = posters["thumbnail"] as String
+        
+        //Need to get detail photos
+        
+        var higherDetailPosterURL = thumbnailPosterURL.stringByReplacingOccurrencesOfString("tmb", withString: "org",
+            options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         
-        
-        
+        movieDetailPoster.setImageWithURL(NSURL(string: higherDetailPosterURL))
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +59,9 @@ class MovieViewDetailsController: UIViewController {
     }
     
     
+    @IBAction func movieHandlePan(sender: UIPanGestureRecognizer) {
+        
+    }
     
 
     /*
