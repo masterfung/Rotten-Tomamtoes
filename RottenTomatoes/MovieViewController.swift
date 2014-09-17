@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -60,9 +61,22 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var posters = movie["posters"] as NSDictionary
         var posterUrl = posters["thumbnail"] as String
         
+        var mpaaRating : String! = movie["mpaa_rating"] as String
+        
         cell.posterView.setImageWithURL(NSURL(string: posterUrl))
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Pass movie details to the movieViewDetailsController
+        var movieViewDetailsController: MovieViewDetailsController = segue.destinationViewController as MovieViewDetailsController
+        
+        var movieIndex = tableView!.indexPathForSelectedRow()?.row
+        
+        var selectedMovie = self.movies[movieIndex!]
+        movieViewDetailsController.movie = selectedMovie
+        
     }
 
 

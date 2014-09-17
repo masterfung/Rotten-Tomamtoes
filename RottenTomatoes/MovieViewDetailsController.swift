@@ -18,7 +18,7 @@ class MovieViewDetailsController: UIViewController {
     
     @IBOutlet weak var ratingLabel: UILabel!
     
-    
+    @IBOutlet weak var scoreRatingLabel: UILabel!
     
     @IBOutlet weak var summaryLabel: UILabel!
     
@@ -27,11 +27,21 @@ class MovieViewDetailsController: UIViewController {
         
         self.navigationItem.title = movie["title"] as? String
         
-        var movieTitle: string = movie["title"] as String
-        var movieYear: Int = movie["year"] as Int
-        var movieRatings: NSDictionary = ratings["ratings"] as NSDictionary
-        var movieCriticsScore: Int = ratings["critics_score"] as Int
-        var movieAudienceScore: Int = ratings["audience_score"] as Int
+        var title : String = movie["title"] as String
+        var year : Int = movie["year"] as Int
+        var ratings : NSDictionary = movie["ratings"] as NSDictionary
+        var criticsScore : Int = ratings["critics_score"] as Int
+        var audienceScore : Int = ratings["audience_score"] as Int
+        var synopsis : String = movie["synopsis"] as String
+        var rating : String = movie["mpaa_rating"] as String
+        
+        
+        self.movieLabel.text = title
+        self.ratingLabel.text = rating
+        self.scoreRatingLabel.text = "Critics Score: \(String (criticsScore)) Audience Score: \(String (audienceScore))"
+        self.summaryLabel.text = synopsis
+        
+        
         
         
         
