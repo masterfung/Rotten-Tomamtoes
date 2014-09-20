@@ -37,7 +37,7 @@ class MovieViewDetailsController: UIViewController {
         
         
         self.movieLabel.text = title
-        self.ratingLabel.text = rating
+        self.ratingLabel.text = "Rating: \(String (rating))"
         self.scoreRatingLabel.text = "Critics Score: \(String (criticsScore)) Audience Score: \(String (audienceScore))"
         self.summaryLabel.text = synopsis
         
@@ -48,6 +48,20 @@ class MovieViewDetailsController: UIViewController {
         
         var higherDetailPosterURL = thumbnailPosterURL.stringByReplacingOccurrencesOfString("tmb", withString: "org",
             options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        movieDetailPoster.alpha = 0
+        movieDetailPoster.setImageWithURL(NSURL(string: thumbnailPosterURL))
+        
+        // make image fade in
+        UIView.animateWithDuration(1.0,
+            delay: 0.0,
+            options: nil,
+            animations: {
+                self.movieDetailPoster.alpha = 1.0
+            },
+            completion: {
+                finished in
+        })
         
         
         movieDetailPoster.setImageWithURL(NSURL(string: higherDetailPosterURL))
@@ -60,7 +74,39 @@ class MovieViewDetailsController: UIViewController {
     
     
     @IBAction func movieHandlePan(sender: UIPanGestureRecognizer) {
+        let movement = sender.translationInView(self.view)
+        var newY : CGPoint = CGPoint(x: sender.view!.frame.origin.x, y: sender.view!.frame.origin.y + movement.y)
         
+        
+        
+        if (newY.y > 10 && newY.y < 350){
+            sender.view!.frame.origin = CGPoint(x:sender.view!.frame.origin.x,
+                y:sender.view!.frame.origin.y + movement.y)
+            sender.setTranslation(CGPointZero, inView: self.view)
+            
+            if sender.state == UIGestureRecognizerState.Ended {
+                //1
+                
+                let velocity = sender.velocityInView(self.view)
+                let magnitude = sqrt((velocity.x * velocity.x) + (velocity.y * velocity.y))
+                let slideMultiplier = magnitude/500
+                println("magnitude: \(magnitude), slideMultiplier: \(slideMultiplier)")
+                
+                //2
+                let slideFactor = 0.15 * slideMultiplier
+                
+                //3
+                var finalPoint = CGPoint(x:sender.view!.frame.origin.x, y: sender.view!.frame.origin.y + (velocity.y * slideFactor))
+                
+                //4
+                
+                finalPoint.x = min(max(finalPoint.x, 0), self.view.frame.origin.x)
+                finalPoint.y = min(max(finalPoint.y,66), 350)
+                
+                UIView.animateWithDuration(Double(slideFactor), delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {sender.view!.frame.origin = finalPoint}, completion: nil)
+                
+            }
+        }
     }
     
 
